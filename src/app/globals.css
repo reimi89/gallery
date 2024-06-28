@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.tab > input[type="radio"] {
+  display: none;
+}
+
+.tab-content {
+  display: none;
+  width: 100%;
+
+}
+
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4,
+#tab-btn-5:checked~#content-5,
+#tab-btn-6:checked~#content-6 {
+  display: block;
+}
+
+.tab > label {
+  cursor: pointer;
+  border-bottom: 0.125rem solid transparent;
+}
+
+.tab > input[type="radio"]:checked + label {
+  cursor: default;
+  font-weight: bold;
+  color: #8FA6C1;
+  border-bottom-color: #9DBBDD;
+}
